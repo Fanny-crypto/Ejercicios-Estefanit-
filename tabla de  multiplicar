@@ -1,0 +1,12 @@
+function TablaMultiplicar (){
+    let numero1 = parseInt(prompt("ingresa el valor :"));
+    let resultado = i ;
+    if (numero1>0 && numero1<=10)
+    {
+        for (i=1; i<=10;i ++)
+        console.log ("${numero1} * ${i} = ${resultado}");
+    }else{
+        console.log ("valor invalido");
+    }
+}
+

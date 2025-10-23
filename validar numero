@@ -1,0 +1,16 @@
+const readline = require('readline-sync');
+
+const input = readline.question("Ingresa un numero: ");
+const num = parseFloat(input);
+
+if (isNaN(num)) {
+  console.log("Entrada inválida.");
+} else {
+  if (num === 0) {
+    console.log("Es 0");
+  } else if (num > 0) {
+    console.log("Es positivo");
+  } else {
+    console.log("Es negativo");
+  }
+}

@@ -1,0 +1,17 @@
+function verificarAcceso(edad) {
+  if (edad >= 18) {
+    return "Acceso permitido";
+  } else {
+    return "Acceso denegado";
+  }
+}
+
+// Ejemplos de uso//
+let resultado1 = verificarAcceso(20);
+console.log(resultado1); 
+
+let resultado2 = verificarAcceso(15);
+console.log(resultado2);
+
+let resultado3 = verificarAcceso(18);
+console.log(resultado3);

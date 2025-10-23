@@ -1,0 +1,22 @@
+function calcular(num1,num2){
+    if(num1>num2){
+        const suma =num1 + num2;
+        console.log("Suma:" + suma);
+    }else if (num2 > num1){
+        let sumatoria = 0;
+        for (let i = 1; i <= num1; i++){
+            sumatoria += i;
+        }
+        for (let i = 1; i <= num2; i++){
+            sumatoria += i;
+        }
+        console.log("Sumatoria: " + sumatoria);
+    } else {
+const producto = num1 * num2;
+console.log("Producto: " + producto);
+    }
+}
+//ejemplo de uso//
+calcular(5,7);
+calcular(6,6);
+calcular(4,10);

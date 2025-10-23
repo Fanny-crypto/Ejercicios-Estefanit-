@@ -1,0 +1,13 @@
+function calcularHorasDormidas (edad){
+//definir las variables//
+const horas_dia = 8;
+const dias_año = 365;
+//calcular las horas dormidas por año//
+horas_dormidas_por_ano = horas_dia * dias_año;
+//calcular la horas dormidas en toda la vida//
+const horas_dormidas_total =horas_dormidas_por_ano * edad;
+//imprimir el resultado//
+console.log("horas dormidas en su vida para una persona:",horas_dormidas_total);
+}
+//horas dormida para una persona de 20 años
+calcularHorasDormidas(20);

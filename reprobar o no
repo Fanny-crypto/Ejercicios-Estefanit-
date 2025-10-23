@@ -1,0 +1,18 @@
+const readline = require('readline-sync');
+
+const input = readline.question("Ingresa una calificacion (0-100): ");
+const calificacion = parseFloat(input);
+
+if (isNaN(calificacion)) {
+  console.log("Entrada inválida. Ingresa un número.");
+} else if (calificacion < 0 || calificacion > 100) {
+  console.log("Calificación fuera de rango. Debe estar entre 0 y 100.");
+} else {
+  if (calificacion >= 90 && calificacion <= 100) {
+    console.log("Excelente");
+  } else if (calificacion >= 70 && calificacion <= 89) {
+    console.log("Bien");
+  } else {
+    console.log("Reprobado");
+  }
+}

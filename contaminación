@@ -1,0 +1,14 @@
+function calcularContaminacion (indice){
+    if (indice<=37){
+console.log ("Aceptable");
+    }else if (indice >= 38 && indice <= 55)
+    {
+        console.log("Desagradable");
+    }else{
+        console.log("Peligroso");
+    }
+}
+//ejemplo de uso//
+calcularContaminacion(33);
+calcularContaminacion(43);
+calcularContaminacion(65);

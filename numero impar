@@ -1,0 +1,16 @@
+function imprimirImpares(N) {
+  let contador = 0;
+  console.log("Números impares desde 1 hasta " + N + ":");
+
+  for (let i = 1; i <= N; i++) {
+    if (i % 2 !== 0) {
+      console.log(i);
+      contador++;
+    }
+  }
+
+  console.log("Total de números impares: " + contador);
+}
+
+// Ejemplo de uso:
+imprimirImpares(20);

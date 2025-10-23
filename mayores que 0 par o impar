@@ -1,0 +1,17 @@
+function determinarParImpar(N) {
+  if (N > 0) {
+    if (N % 2 === 0) {
+      console.log(N + " es par");
+    } else {
+      console.log(N + " es impar");
+    }
+  } else {
+    console.log(N + " no es mayor que cero");
+  }
+}
+
+// Ejemplos de uso:
+determinarParImpar(4);   
+determinarParImpar(7);   
+determinarParImpar(0);   
+determinarParImpar(-2); 

@@ -1,0 +1,20 @@
+function calcularTotalCompra(libros, precioLibro, descuentoLibro, discos, precioDisco, descuentoDisco, tocadiscos) {
+  let totalLibros = libros * precioLibro * (1 - descuentoLibro);
+  let totalDiscos = discos * precioDisco * (1 - descuentoDisco);
+  let subtotal = totalLibros + totalDiscos + tocadiscos;
+  let total = subtotal * 0.98; // 2% de descuento por pronto pago
+
+  console.log("Total de la compra: $" + total.toFixed(2));
+  return total;
+}
+
+// Datos del cliente
+const libros = 4;
+const precioLibro = 568;
+const descuentoLibro = 0.20;
+const discos = 3;
+const precioDisco = 45;
+const descuentoDisco = 0.15;
+const tocadiscos = 678;
+
+calcularTotalCompra(libros, precioLibro, descuentoLibro, discos, precioDisco, descuentoDisco, tocadiscos);

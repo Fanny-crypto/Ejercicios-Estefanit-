@@ -1,0 +1,13 @@
+function calcularSumatoriaPares() {
+  let sumatoria = 0;
+
+  for (let i = 500; i <= 800; i++) {
+    if (i % 2 === 0) {
+      sumatoria += i;
+    }
+  }
+
+  console.log("La sumatoria de los números pares entre 500 y 800 es: " + sumatoria);
+}
+
+calcularSumatoriaPares();
