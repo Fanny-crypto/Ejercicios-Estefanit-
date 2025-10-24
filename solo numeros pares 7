@@ -1,0 +1,41 @@
+const readline = require("readline");
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+// Función para preguntar y esperar la respuesta
+function preguntar(pregunta) {
+    return new Promise((resolve) => {
+        rl.question(pregunta, (input) => resolve(input));
+    });
+}
+
+async function main() {
+    let contador = 0;
+    let numero;
+
+    while (true) {
+        let input = await preguntar("Ingresa un número (solo pares, 0 cuenta). Ingresa un impar para terminar: ");
+        numero = parseInt(input);
+
+        if (isNaN(numero)) {
+            console.log("Eso no es un número. Intenta de nuevo.");
+            continue; // Volver a pedir
+        }
+
+        if (numero % 2 !== 0) {
+            console.log("Número impar ingresado. El programa ha terminado.");
+            break; // Sale del while
+        }
+
+        contador++;
+    }
+
+    console.log(`Cantidad de números pares ingresados: ${contador}`);
+    rl.close();
+}
+
+// Ejecutar el programa
+main();

@@ -1,0 +1,29 @@
+// @ts-nocheck
+
+const readline = require("readline");
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+function pedirNumero() {
+  rl.question("Teclea un número entre 1 y 5: ",(entrada)=> {
+    const numero = parseInt(entrada);
+
+    if (!isNaN(numero) && numero >= 1 && numero <= 5) {
+      console.log(`¡Correcto! El número ingresado es ${numero}`);
+      rl.close(); 
+    } else {
+      console.log("Número inválido. Intenta nuevamente.");
+      pedirNumero();
+    }
+  });
+}
+
+pedirNumero();
+
+
+
+
+

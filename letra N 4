@@ -1,0 +1,23 @@
+// @ts-nocheck
+
+const readline = require("readline");
+
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+function preguntar() {
+  rl.question("¿Deseas continuar? (Pulsa 'n' para salir): ", (respuesta) => {
+    if (respuesta.toLowerCase() === "n") {
+      console.log("Programa finalizado. ¡Hasta luego!");
+      rl.close();
+    } else {
+      preguntar(); // vuelve a preguntar
+    }
+  });
+}
+
+preguntar();
+

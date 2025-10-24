@@ -1,0 +1,8 @@
+let cal=parseInt(prompt("ingresa la calificacion"))
+if (cal>=7){
+    console.log("APROBADO")
+}else{
+    console.log("REPROBADO")
+}
+let resultado = cal>6 ? "BIEN": cal>8 ? "MUY BIEN":"EXCELENTE"
+console.log(resultado);

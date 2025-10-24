@@ -1,0 +1,42 @@
+function calcularViaje(numAlumnos) {
+  let costoPorAlumno = 0;
+  let pagoCompania = 0;
+
+  if (numAlumnos >= 100) {
+    costoPorAlumno = 65;
+    pagoCompania = numAlumnos * costoPorAlumno;
+  } else if (numAlumnos >= 50 && numAlumnos <= 99) {
+    costoPorAlumno = 70;
+    pagoCompania = numAlumnos * costoPorAlumno;
+  } else if (numAlumnos >= 30 && numAlumnos <= 49) {
+    costoPorAlumno = 95;
+    pagoCompania = numAlumnos * costoPorAlumno;
+  } else {
+    pagoCompania = 4000;
+    costoPorAlumno = pagoCompania / numAlumnos; // Calcula el costo por alumno
+  }
+
+  return {
+    costoPorAlumno: costoPorAlumno,
+    pagoCompania: pagoCompania
+  };
+}
+
+// Ejemplos de uso:
+let alumnos1 = 120;
+let resultado1 = calcularViaje(alumnos1);
+console.log("Para", alumnos1, "alumnos:");
+console.log("Costo por alumno:", resultado1.costoPorAlumno);
+console.log("Pago a la compañía:", resultado1.pagoCompania);
+
+let alumnos2 = 40;
+let resultado2 = calcularViaje(alumnos2);
+console.log("Para", alumnos2, "alumnos:");
+console.log("Costo por alumno:", resultado2.costoPorAlumno);
+console.log("Pago a la compañía:", resultado2.pagoCompania);
+
+let alumnos3 = 25;
+let resultado3 = calcularViaje(alumnos3);
+console.log("Para", alumnos3, "alumnos:");
+console.log("Costo por alumno:", resultado3.costoPorAlumno);
+console.log("Pago a la compañía:", resultado3.pagoCompania);
